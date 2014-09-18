@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Two way Data binding Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="core.js"></script>
+  </head>
+  <body>
+    <div id="container" ng-app='two_way' ng-controller='two_way_control'>
+      <div class="row" ng-repeat="data in profile_pictures">
+        <div class=".col-sm-6 .col-md-5 .col-lg-6" style="background-color:#eee;height:150px;width:500px;margin-left:240px;margin-top:20px;">
+          <h4 style="padding:10px;">User Say's</h4><hr>
+          <p style="padding:10px;">
+            This is a Demo feed. It is developed to demonstrate Two way data binding.
+          </p>
+          <img src="{{data.profile_picture}}" class="img-circle" style="width:100px;height:100px;margin-left:-140px;margin-top:-130px;">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
